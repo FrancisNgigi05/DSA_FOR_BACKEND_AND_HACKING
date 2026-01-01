@@ -18,7 +18,11 @@ FUNCTION pair_sum_sorted(list, target):
 
 Explanation
 -----------
-In this case the left pointer points to the least value which is at the first position and the right pointer points to the last position(largest value). When the left pointer is moved to the right and the right pointer is not moved the sum increases and if the right pointer is moved to the left and the left pointer is not moved the sum decreases. If the sum is lesser than the target move the left pointer foward and if the sum is larger than the target move the right pointer backward
+In this case the left pointer points to the least value which is at the first position and the right pointer
+points to the last position(largest value). When the left pointer is moved to the right and the right pointer 
+is not moved the sum increases and if the right pointer is moved to the left and the left pointer is not moved 
+the sum decreases. If the sum is lesser than the target move the left pointer foward and if the sum is larger 
+than the target move the right pointer backward
 
 FUNCTION two_pointer_pair_sum_sorted(list, target):
     # INITIALIZE THE LEFT AND RIGHT POINTER
