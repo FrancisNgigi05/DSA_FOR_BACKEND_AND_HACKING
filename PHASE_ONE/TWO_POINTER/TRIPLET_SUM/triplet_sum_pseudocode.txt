@@ -1,0 +1,58 @@
+-> O(n^3) solution
+
+FUNCTION triplet_sum(list):
+    STORE LENGTH OF LIST
+    VARIABLE=TRIPLETS TYPE=SET()
+
+    FOR LOOP:
+        FOR LOOP:
+            FOR LOOP:
+                SUM = list[i] + list[j] + list[k]
+                IF SUM == 0:
+                    TRIPLET = [list[i], list[j], list[k]] 
+                    TRIPLETS.add(TRIPLET)
+
+    RETURN [ALL TRIPLES IN TRIPLETS]
+
+
+-> USING TWO POINTER ALGORITHM
+
+Explanation
+-----------
+a + b + c = 0
+b + c = -a
+
+[0, -1, 2, -3, 1]
+ ^   ^         ^
+ |   |         |
+ a   b         c
+
+Using pair_sum_sorted() function to get the values b and c that will have a sum == -a
+If values b and c are not found move the pointer a forward and look for the b and c values again
+
+Check if a is a -ve value if not there cannot be a sum a + b + c = 0
+Ensure value a is a unique value
+Ensure value b is a unique value
+
+c = -(a + b)
+
+FUNCTION pair_sum_sorted(list, target):
+    .....
+    HANDLE nums[b] == nums[b-1]:
+        left += 1
+
+FUNCTION triplet_sum(list):
+    SORT list
+
+    FOR LOOP:
+        target = list[i]
+        # CHECKING IF a IS UNIQUE
+        CHECK IF list[i] > 0:
+            BREAK 
+        CHECK IF i > 0 and list[i] == list[i -1]:
+            CONTINUE # INCREMENT i (i++) => {i=0 -> i=1}
+        result = pair_sum_sorted([i + 1:] ,target=-target)
+        triplet = [target] + result
+        triplets.add(triplet)
+    
+    RETURN EACH TRIPLET IN TRIPLETS
