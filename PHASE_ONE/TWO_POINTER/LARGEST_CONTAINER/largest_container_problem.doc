@@ -1,0 +1,9 @@
+Largest Container
+You are given an array of numbers, each representing the height of a vertical line on a graph. A container can be formed with any pair of these lines, along with the x-axis of the graph. Return the amount of water which the largest container can hold.
+
+Example:
+Image represents a bar chart or histogram with a horizontal x-axis ranging from 0 to 5 and a vertical y-axis ranging from 0 to 8.  The y-axis represents frequency or count, while the x-axis likely represents categories or data points.  The chart displays several vertical bars of varying heights. A bar at x=0 has a height of 2.  Bars at x=1, x=2, x=4, and x=5 all reach a height of 6, forming a plateau of light-blue filled area.  A shorter bar at x=3 reaches a height of 3.  The bars are represented by vertical black lines extending from the x-axis to their respective heights on the y-axis.  The area under the bars from y=0 to y=6 between x=1 and x=5 is filled with light blue, visually highlighting the consistent frequency across those data points.
+
+Input: heights = [2, 7, 8, 3, 7, 6]
+Output: 24
+
