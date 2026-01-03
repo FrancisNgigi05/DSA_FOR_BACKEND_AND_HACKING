@@ -27,7 +27,7 @@ than the target move the right pointer backward
 FUNCTION two_pointer_pair_sum_sorted(list, target):
     # INITIALIZE THE LEFT AND RIGHT POINTER
     left, right = list[0], list[-1]
-    WHILE left > right:
+    WHILE left < right:
         CHECK IF left + right < target:
                 left+=1
         CHECK IF left + right > target:

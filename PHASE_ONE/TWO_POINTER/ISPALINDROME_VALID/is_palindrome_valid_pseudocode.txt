@@ -1,0 +1,27 @@
+FUNCTION is_palindrom(string) -> Boolean:
+    IF STRING IS EMPTY:
+        RETURN FALSE
+    CONFIRM STRING IS IN SMALL LETTERS
+    # ALLOWED [LETTERS AND NUMBERS]
+    HANDLE LOGIC FOR FILTERING OUT SPACES AND PANCTUATIONS
+    input_string = "a!b#c123$%d"
+    # Filter out any character that is NOT alphanumeric
+    whitelisted_string = ''.join(char for char in input_string if char.isalnum())
+    print(whitelisted_string)
+    # Output: 'abc123d'
+    CONVERT STRING TO ARRAY
+    #INITIALIZE TWO POINTERS AT BOTH ENDS OF THE ARRAY
+    i, j = 0, len(array)
+    # CONDITIONAL LOOP
+    WHILE LEFT < RIGHT:
+        # COMPARE IF THE ELEMENTS FROM BOTH ENDS ARE EQUAL
+        IF arri[i] == arr[j]:
+            # MOVE LEFT POINTER ONE STEP RIGHT
+            i+=1
+            # MOVE RIGHT POINTER ONE STEP RIGHT
+            j -= 1
+
+        ELSE:
+            # EXIT LOOP
+            RETURN False
+    RETURN True
