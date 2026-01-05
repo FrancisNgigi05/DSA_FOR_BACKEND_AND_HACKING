@@ -1,0 +1,54 @@
+# Function is supposed to get the max sum that can be generated from k elements
+# in the array(subarray of length k)
+
+k = 3
+
+[5, 2, -1, 0, 3]
+ ^     ^
+ |     |
+ left  right
+ |     |
+  -----
+    |
+    v
+Window Sum
+
+# Remove the first element then add the next element after last element
+
+5 + 2 + (-1) = 6
+
+windo_sum = 6 # Window sum of first subarray of length k
+
+To get next Window sum:
+    => Remove first element = 5
+    => Add last element = 0
+    Window_sum(6) + 0 - 5 = 1
+
+
+Equal to the secode set of sub array sum:
+    2 + (-1) + 0 = 1
+
+
+INPUT:
+    -Array
+    -k -> The number of elements needed to generate a sum
+
+FUNCTION max_subarray_sum(List[int], k: int) -> int:
+    STORE LENGTH OF ARRAY
+
+    # COMPUTE SUM OF FIRST SUB ARRAY
+    windo_sum = sum(arr[:k])
+
+    left = 0
+    # GETTING THE WINDOW SUM
+    FOR right in range(k, n):
+        # Add the next element
+        windo_sum += arr[right]
+        # Remove the first element
+        window_sum -= arr[left]
+        left += 1
+
+        COMPARE IF Window_sum > max_sum:
+            STORE max_sum = window_sum
+    
+    RETURN max_sum
