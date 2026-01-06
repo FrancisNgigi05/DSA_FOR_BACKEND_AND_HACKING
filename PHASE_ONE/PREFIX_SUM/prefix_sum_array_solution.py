@@ -1,7 +1,6 @@
 from typing import List
 # Input: Arr[] => Original array
-# Output: Arr[] => Array with prefix sum
-
+# Output: Arr[] => Prefix Sum array
 def prefix_sum_array_solution(arr: List[int]) -> List[int]:
     # Check if the list is empty
     if not arr:

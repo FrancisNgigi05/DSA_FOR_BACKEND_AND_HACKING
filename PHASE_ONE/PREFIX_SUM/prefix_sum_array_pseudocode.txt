@@ -12,9 +12,8 @@ FUNCTION prefix_sum_array(List[int]) -> List[int]:
     prefix_sum_array[0] = List[0]
     # ITERATE THE ORIGINAL ARRAY
     FOR i in range(l, len(ORIGINAL ARRAY)):
-        # MAKING SURE THE NEXT ELEMENT IS THE SUM OF THE PREVIOUS ELEMENT AND
+        # MAKING SURE THE NEXT ELEMENT IS THE SUM OF THE PREVIOUS SUM  AND
         # NEXT ELEMENT
         prefix_sum_array[i] = prefix_sum_array[i - 1] + List[i]
-        prefix_sum_array.append(prefix_sum)
 
     RETURN prefix_sum_array
